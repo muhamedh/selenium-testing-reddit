@@ -60,19 +60,17 @@ class testPostDraft {
 		
 		saveDraftButton.click();
 		Thread.sleep(400);
+		
 		// go to draft list
-		webDriver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div[2]/div[1]/button")).click();
-		
-		// wait till draft list loads
-		
-	    Thread.sleep(2000);
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div[2]/div[1]/button"))
+				).click();
 		
 		// check if draft is saved
-		/*
+		
 		WebElement draftTitle = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\\\"SHORTCUT_FOCUSABLE_DIV\\\"]/div[4]/div/div/div/div[2]/div/div[2]/h2"))
-				);*/
-			WebElement draftTitle =	webDriver.findElement(By.xpath("//*[@id=\"SHORTCUT_FOCUSABLE_DIV\"]/div[4]/div/div/div/div[2]/div/div[2]/h2"));
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div[2]/div[4]/div/div/div/div[2]/div[1]/div[2]/h2"))
+				);
 		System.out.println(draftTitle.getText());
 		assertEquals(draftTitle.getText(),"EDITING: Test Title");
 		
