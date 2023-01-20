@@ -31,8 +31,8 @@ class testLoginUserFlow {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		
-		String path = "C:\\Users\\Amira\\Downloads\\ReditProfile";
-		options.addArguments("--user-data-dir="+path); 
+		//String path = "C:\\Users\\Amira\\Downloads\\ReditProfile";
+		//options.addArguments("--user-data-dir="+path); 
 
 		options.addArguments("--start-maximized");
 
