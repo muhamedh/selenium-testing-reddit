@@ -84,7 +84,7 @@ class testEmojiSend {
 		
 		// press emoji button
 		wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div/main/div[1]/div[2]/div/form/div/div/div/div"))
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div/main/div[1]/div[2]/div[1]/form/div/div/div/div[2]"))
 				).click();
 		
 		//press sloth emoji
